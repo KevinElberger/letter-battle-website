@@ -6,7 +6,7 @@
   "scripts": {
     "webpack": "webpack",
     "start": "webpack-dev-server --hot --mode production",
-    "build": "NODE_ENV=production yarn && webpack -p --config ./webpack.production.config.js"
+    "build": "NODE_ENV=production webpack -p --config ./webpack.production.config.js"
   },
   "author": "Kevin Elberger",
   "license": "MIT",
