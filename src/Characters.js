@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 const Characters = (props) => {
   return props.letters.split('').map((character, i) => {
     return (
-      <div className={'character' + (props.word.indexOf(character) > -1 ? ' active' : '')} key={i}>
+      <div className={'character' + (props.word.indexOf(character) > -1 ? ' active' : '')} key={i} onClick={(e) => props.onClick(e)}>
         <h3>{ character } </h3>
       </div>
     );

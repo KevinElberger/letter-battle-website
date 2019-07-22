@@ -4,8 +4,8 @@
   "description": "A game where you put your vocabulary to the test",
   "main": "index.js",
   "scripts": {
-    "webpack": "webpack",
-    "start": "webpack-dev-server --hot --mode production",
+    "webpack": "webpack -p --progress",
+    "start": "webpack-dev-server --hot --mode development",
     "build": "NODE_ENV=production webpack -p --config ./webpack.production.config.js"
   },
   "author": "Kevin Elberger",
