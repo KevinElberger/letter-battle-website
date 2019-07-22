@@ -72,6 +72,7 @@ class App extends Component {
     }));
   }
 
+  // TODO: Handle forfeit via leaving the game
   onMessage(message) {
     const { update } = message;
 
@@ -80,7 +81,6 @@ class App extends Component {
     if (!update.winner) return;
 
     let msg = '';
-    // const wonByForfeit = update.winner; TODO: Handle when someone leaves
     const wonByScore = update.winner._score === this.state.players[this.colyseus.id]._score;
     if (update.winner && wonByScore) {
       msg = '🥳 You won!';
@@ -184,9 +184,7 @@ class App extends Component {
 
   handleClick() {
     var textField = document.createElement('textarea');
-    // textField.style.display = 'none';
     textField.innerText = location.href;
-    console.log(textField.innerText);
     document.body.appendChild(textField);
     textField.select();
     document.execCommand('copy');
